@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="swiper">
+    <swiper indicator-dots="false" autoplay="false" interval="5000" duration="1000">
+        <swiper-item wx:for="{{slideList}}" wx:key="slide" wx:id="id" wx:if="{{item.image}}">
+            <image src="{{item.image}}" class="slide-image" wx:if="{{item.type==0}}" mode="aspectFill"/>
+            <video src="{{item.image}}" wx:if="{{item.type==1}}" class="slide-video" controls="true" poster='https://ws4.sinaimg.cn/large/006tNc79gy1fvu3fjokaoj31ak0j8b1o.jpg'></video>
+        </swiper-item>
+    </swiper>
+  </view>
+</view>
+
